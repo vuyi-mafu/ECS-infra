@@ -28,9 +28,9 @@ jobs:
   terraform:
     name: Terraform Plan & Apply
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: /
+    # defaults:
+    #   run:
+    #     working-directory: terraform
     
     outputs:
       ecr_repository_url: ${{ steps.tf-output.outputs.ecr_repository_url }}
