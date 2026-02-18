@@ -131,3 +131,4 @@ jobs:
           echo "🌐 Application URL: ${{ steps.tf-output.outputs.alb_url }}"
           echo ""
           echo "Next: Push your application code to trigger deployment"
+          
