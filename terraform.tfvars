@@ -9,4 +9,4 @@ private_subnet_cidrs = ["10.0.11.0/24", "10.0.12.0/24"]
 container_port = 80
 task_cpu       = 256
 task_memory    = 512
-desired_count  = 0
+desired_count  = 1
