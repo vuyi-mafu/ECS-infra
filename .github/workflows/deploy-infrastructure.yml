@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'terraform/**'
-      - '.github/workflows/1-deploy-infrastructure.yml'
+      - '.github/workflows/deploy-infrastructure.yml'
   pull_request:
     branches:
       - main
@@ -131,4 +131,3 @@ jobs:
           echo "🌐 Application URL: ${{ steps.tf-output.outputs.alb_url }}"
           echo ""
           echo "Next: Push your application code to trigger deployment"
-          
