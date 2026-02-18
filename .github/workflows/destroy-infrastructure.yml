@@ -1,4 +1,4 @@
-name: 3. Destroy Infrastructure
+name: Destroy Infrastructure
 
 on:
   workflow_dispatch:
@@ -17,9 +17,9 @@ jobs:
     name: Destroy All Infrastructure
     runs-on: ubuntu-latest
     if: github.event.inputs.confirm == 'destroy'
-    defaults:
-      run:
-        working-directory: terraform
+    # defaults:
+    #   run:
+    #     working-directory: terraform
     
     steps:
       - name: Checkout code
