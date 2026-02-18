@@ -157,3 +157,4 @@ jobs:
           echo "🚀 ECS Cluster: ${{ steps.tf-output.outputs.ecs_cluster_name }}"
           echo "⚙️ ECS Service: ${{ steps.tf-output.outputs.ecs_service_name }}"
           echo "🌐 Application URL: ${{ steps.tf-output.outputs.alb_url }}"
+          
