@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: terraform
+        working-directory: /
     
     outputs:
       ecr_repository_url: ${{ steps.tf-output.outputs.ecr_repository_url }}
