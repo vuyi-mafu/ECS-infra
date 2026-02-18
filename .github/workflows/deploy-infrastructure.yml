@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+  AWS_REGION: af-south-1
   TERRAFORM_VERSION: 1.6.0
 
 # OIDC permissions
