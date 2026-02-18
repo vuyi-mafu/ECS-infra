@@ -120,7 +120,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: tfplan
-          path: terraform
+          path: tfplan
 
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v4
