@@ -50,19 +50,22 @@ resource "aws_ecs_task_definition" "main" {
     logConfiguration = {
       logDriver = "awslogs"
       options = {
-        "awslogs-group"         = aws_cloudwatch_log_group.ecs.name
+        "awslogs-group"         = "/ecs/${var.project_name}"
         "awslogs-region"        = var.aws_region
         "awslogs-stream-prefix" = "ecs"
       }
     }
 
-    # healthCheck = {
-    #   command     = ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:${var.container_port}/health').read()\" || exit 1"]
-    #   interval    = 30
-    #   timeout     = 10
-    #   retries     = 3
-    #   startPeriod = 60
-    # }
+    healthCheck = {
+      command = [
+        "CMD-SHELL",
+        "python3 -c \"import urllib.request; urllib.request.urlopen('http://localhost:${var.container_port}/health').read()\" || exit 1"
+      ]
+      interval    = 30
+      timeout     = 10
+      retries     = 3
+      startPeriod = 90
+    }
   }])
 
   tags = {
