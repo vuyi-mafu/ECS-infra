@@ -105,8 +105,8 @@ jobs:
     needs: terraform-plan
 
     # 👇 THIS ENABLES MANUAL APPROVAL
-    environment:
-      name: production
+    # environment:
+    #   name: production
 
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
@@ -154,8 +154,8 @@ jobs:
 
       - name: Display Infrastructure Info
         run: |
-          echo "🎉 Infrastructure deployed successfully!"
-          echo "📦 ECR Repository: ${{ steps.tf-output.outputs.ecr_repository_url }}"
-          echo "🚀 ECS Cluster: ${{ steps.tf-output.outputs.ecs_cluster_name }}"
-          echo "⚙️ ECS Service: ${{ steps.tf-output.outputs.ecs_service_name }}"
-          echo "🌐 Application URL: ${{ steps.tf-output.outputs.alb_url }}"
+          echo "Infrastructure deployed successfully!"
+          echo "ECR Repository: ${{ steps.tf-output.outputs.ecr_repository_url }}"
+          echo "ECS Cluster: ${{ steps.tf-output.outputs.ecs_cluster_name }}"
+          echo "ECS Service: ${{ steps.tf-output.outputs.ecs_service_name }}"
+          echo "Application URL: ${{ steps.tf-output.outputs.alb_url }}"
