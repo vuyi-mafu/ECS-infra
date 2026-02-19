@@ -1,17 +1,17 @@
-name: 1. Deploy Infrastructure (Terraform)
+name: Deploy Infrastructure (Terraform)
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'terraform/**'
-      - '.github/workflows/deploy-infrastructure.yml'
+  #   paths:
+  #     - 'terraform/**'
+  #     - '.github/workflows/deploy-infrastructure.yml'
   pull_request:
     branches:
       - main
-    paths:
-      - 'terraform/**'
+    # paths:
+    #   - 'terraform/**'
   workflow_dispatch:
 
 env:
