@@ -50,4 +50,4 @@ jobs:
         run: terraform destroy -auto-approve
 
       - name: Cleanup Complete
-        run: echo "🗑️ All infrastructure destroyed!"
+        run: echo "All infrastructure destroyed!"
